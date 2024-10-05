@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+    /* Contact Section Styles */
+    .contact-us-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    /* Common styling for both boxes */
+    .contact-box {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      max-width: 100%;
+      flex: 1;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 1.5rem;
+      color: #003366;
+      font-size: 2rem;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 0.5rem;
+    }
+
+    /* Set text color to black for "Get In Touch" section */
+    .contact-us h2,
+    .contact-us p {
+      color: #000000;
+    }
+
+    /* Set text color to black for "Send Us a Message" section */
+    .contact-form h2,
+    .contact-form p,
+    .contact-form label {
+      color: #000000;
+    }
+
+    .company-logos {
+      margin-top: 1.5rem;
+    }
+
+    .company-logos img {
+      max-width: 104px;
+      margin: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+
+    .btn-custom {
+      background-color: #3f9da3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 24px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .btn-custom:hover {
+      background-color: #0b5801;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .contact-us-container {
+        flex-direction: column;
+      }
+
+      .contact-box {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-us-container">
+    <!-- Contact Information -->
+    <div class="contact-box contact-us">
+      <h2>Get In Touch</h2>
+      <p>Email: contact@ourcompany.com</p>
+      <p>Phone: +123 456 7890</p>
+      <p>Address: 1234 Innovation Drive, Tech City</p>
+
+      <!-- Company Logos -->
+      <div class="company-logos">
+        <img src="logo/1.jpg" alt="Company Logo 1">
+        <img src="logo/2.jpg" alt="Company Logo 2">
+        <img src="logo/3.jpg" alt="Company Logo 3">
+        <img src="logo/4.jpg" alt="Company Logo 4">
+        <img src="logo/5.jpg" alt="Company Logo 5">
+        <img src="logo/6.jpg" alt="Company Logo 6">
+        <img src="logo/7.jpg" alt="Company Logo 7">
+        <img src="logo/8.jpg" alt="Company Logo 8">
+        <img src="logo/9.jpg" alt="Company Logo 9">
+        <img src="logo/10.jpg" alt="Company Logo 10">
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-box contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="submit_contact_form.php" method="post">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn-custom">Send Message</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

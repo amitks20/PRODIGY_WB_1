@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #121212; /* Darker background */
+  color: #f0f0f0; /* Soft white for readability */
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #555555, #121212); /* Grey to dark background gradient */
+  color: #f0f0f0; /* Light text */
+  padding: 1.5rem 0;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+/* Header Title */
+header h1 {
+  font-size: 2.5rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #ffffff; /* White text */
+  margin-right: 20px;
+}
+
+/* Navbar */
+nav ul {
+  opacity: 1; 
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #f0f0f0; /* Light text */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1);
+}
+
+nav ul li a:hover {
+  background-color: #555555; /* Grey on hover */
+  color: #ffffff; /* White on hover */
+  transform: scale(1.15);
+  box-shadow: 0px 5px 15px rgba(85, 85, 85, 0.5);
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("images/hero\ \(2\).jpg");
+  background-size: cover;
+  background-position: center;
+  height: 636px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f0f0f0; /* Light text */
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(18, 18, 18, 0.5); /* Semi-transparent dark overlay */
+}
+
+.hero div {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  color: #f0f0f0; /* Light text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add depth */
+}
+
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #f0f0f0; /* Light text */
+}
+
+/* Button */
+.btn {
+  background-color: #555555; /* Grey */
+  color: #f0f0f0; /* Light text */
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+  display: inline-block;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background-color: #333333; /* Darker grey on hover */
+  transform: scale(1.1);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* About Section */
+.about {
+  background-color: #555555; /* Grey */
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.about h2 {
+  color: #ffffff; /* White text */
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #f0f0f0; /* Light text */
+}
+
+/* Products Section */
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3rem 1rem;
+  background-color: #121212; /* Dark background */
+}
+
+.product {
+  background-color: #1f1f1f; /* Slightly lighter dark */
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.product h3 {
+  color: #555555; /* Grey */
+  margin: 1rem 0;
+}
+
+.product p {
+  color: #f0f0f0; /* Light text */
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 3rem 1rem;
+  background-color: #555555; /* Grey */
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #f0f0f0; /* Light text */
+  margin-bottom: 1rem;
+}
+
+.testimonial {
+  margin-bottom: 2rem;
+}
+
+.testimonial p {
+  font-style: italic;
+  color: #f0f0f0; /* Light text */
+}
+
+/* Footer */
+footer {
+  background-color: #121212; /* Dark background */
+  color: #f0f0f0; /* Light text */
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .products {
+    flex-direction: column;
+  }
+
+  .product {
+    max-width: 100%;
+  }
+}
